@@ -13,7 +13,7 @@ const normalFont = localFont({
   // weight: '650',
 });
 const italicFont = localFont({
-  src: "/fonts/Font_italic.ttf",
+  src: "fonts/Font_italic.ttf",
   variable: "--font-italic",
   weight: "650",
 });
