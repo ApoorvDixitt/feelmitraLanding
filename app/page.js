@@ -4,19 +4,18 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import localFont from "next/font/local";
+import { Source_Serif_4 } from 'next/font/google';
+
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  // Define the weight range you need
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  // Include italic if needed
+  style: ['normal', 'italic'],
+  variable: '--font-source-serif',
+});
 
 // Fix the font paths by removing the extra forward slash
-const normalFont = localFont({
-  src: "fonts/Font_normal.ttf",
-  variable: "--font-normal",
-  // weight: '650',
-});
-const italicFont = localFont({
-  src: "fonts/Font_italic.ttf",
-  variable: "--font-italic",
-  weight: "650",
-});
 
 export default function FeelMitraLandingPage() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -338,14 +337,11 @@ export default function FeelMitraLandingPage() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className={`text-center mb-8 z-10 relative mt-24 md:mt-auto px-4 ${normalFont.className}`}
+          className={`text-center mb-8 z-10 relative mt-24 md:mt-auto px-4 ${sourceSerif.className}`}
         >
-          <h1 className="flex flex-col text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-black">
+          <h1 className={`flex flex-col text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-black ${sourceSerif.className}`}>
             Your Journey to
-            <span className={`text-[#EA580C] ${italicFont.className}`}>
-              {" "}
-              Mental Well-being
-            </span>
+            <span className={`text-[#EA580C] italic`}>Mental Well-being</span>
           </h1>
           <p
             className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mt-4 text-black font-normal`}
@@ -363,7 +359,7 @@ export default function FeelMitraLandingPage() {
         >
           <textarea
             placeholder="Your thoughts deserve a home, Start journaling now ..."
-            className={`w-full flex-grow text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#EA580C] placeholder-[#EA580C]/50 outline-none resize-none mb-4 bg-transparent font-light ${italicFont.className}`}
+            className={`w-full flex-grow text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#EA580C] placeholder-[#EA580C]/50 outline-none resize-none mb-4 bg-transparent font-normal italic ${sourceSerif.className}`}
           />
           <button className="self-end bg-[#EA580C] text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#F97316] transition-all text-base md:text-lg">
             Analyze
@@ -382,7 +378,7 @@ export default function FeelMitraLandingPage() {
           className="w-full max-w-[1200px] relative z-10"
         >
           <h2
-            className={`text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-12 text-center ${normalFont.className}`}
+            className={`text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-12 text-center ${sourceSerif.className}`}
           >
             About Feel Mitra
           </h2>
@@ -484,7 +480,7 @@ export default function FeelMitraLandingPage() {
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-8 md:mb-16 text-center w-full max-w-[1000px] ${normalFont.className}`}
+          className={`text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-8 md:mb-16 text-center w-full max-w-[1000px] ${sourceSerif.className}`}
         >
           Features
         </motion.h2>
@@ -623,7 +619,7 @@ export default function FeelMitraLandingPage() {
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            className={`text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-8 md:mb-16 text-center ${normalFont.className}`}
+            className={`text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-8 md:mb-16 text-center ${sourceSerif.className}`}
           >
             Team
           </motion.h2>
@@ -721,7 +717,7 @@ export default function FeelMitraLandingPage() {
           className="text-center max-w-4xl w-full flex flex-col items-center"
         >
           <h2
-            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 ${normalFont.className}`}
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6 ${sourceSerif.className}`}
           >
             Simple Steps to Emotional Wellness
           </h2>
@@ -753,7 +749,7 @@ export default function FeelMitraLandingPage() {
               </div>
               <div className="pt-4 lg:pt-6">
                 <h3
-                  className={`text-lg lg:text-xl text-black font-bold mb-2 ${normalFont.className}`}
+                  className={`text-lg lg:text-xl text-black font-bold mb-2 ${sourceSerif.className}`}
                 >
                   Write Your Thoughts
                 </h3>
@@ -786,7 +782,7 @@ export default function FeelMitraLandingPage() {
               </div>
               <div className="pt-4 lg:pt-6">
                 <h3
-                  className={`text-lg lg:text-xl text-black font-bold mb-2 ${normalFont.className}`}
+                  className={`text-lg lg:text-xl text-black font-bold mb-2 ${sourceSerif.className}`}
                 >
                   AI Analysis
                 </h3>
@@ -819,7 +815,7 @@ export default function FeelMitraLandingPage() {
               </div>
               <div className="pt-4 lg:pt-6">
                 <h3
-                  className={`text-lg lg:text-xl text-black font-bold mb-2 ${normalFont.className}`}
+                  className={`text-lg lg:text-xl text-black font-bold mb-2 ${sourceSerif.className}`}
                 >
                   Get Insights
                 </h3>
@@ -852,7 +848,7 @@ export default function FeelMitraLandingPage() {
               </div>
               <div className="pt-4 lg:pt-6">
                 <h3
-                  className={`text-lg lg:text-xl text-black font-bold mb-2 ${normalFont.className}`}
+                  className={`text-lg lg:text-xl text-black font-bold mb-2 ${sourceSerif.className}`}
                 >
                   Track Progress
                 </h3>
