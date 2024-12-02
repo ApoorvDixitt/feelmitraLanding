@@ -4,16 +4,16 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 
 // Fix the font path
 const normalFont = localFont({
-  src: "/fonts/Font_normal.ttf",
+  src: "fonts/Font_normal.ttf",
   variable: "--font-normal",
   // weight: '650',
 });
 const italicFont = localFont({
-  src: "/fonts/Font_italic.ttf",
+  src: "fonts/Font_italic.ttf",
   variable: "--font-italic",
   weight: "650",
 });
