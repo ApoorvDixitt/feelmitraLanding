@@ -106,7 +106,7 @@ export default function FeelMitraLandingPage() {
       },
     },
     {
-      name: "Anant Vardhan Pandey",
+      name: "Anant Vardhan",
       role: "Data Science Director",
       image: "/Anant_2.jpg",
       description: "Transforming raw emotional data into meaningful insights.",
@@ -643,12 +643,12 @@ export default function FeelMitraLandingPage() {
                 <h3 className="text-lg md:text-xl lg:text-2xl text-black font-bold mb-2">
                   {member.name}
                 </h3>
-                <p className="text-[#F97316] text-sm md:text-base lg:text-lg font-medium mb-3">
+                {/* <p className="text-[#F97316] text-sm md:text-base lg:text-lg font-medium mb-3">
                   {member.role}
                 </p>
                 <p className="text-sm md:text-base text-[#EA580C] leading-relaxed mb-4">
                   {member.description}
-                </p>
+                </p> */}
 
                 {/* Add social links */}
                 <div className="flex space-x-4 mt-auto">
