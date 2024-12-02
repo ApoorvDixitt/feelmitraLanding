@@ -20,11 +20,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <head>
+        <title>Feel Mitra - Your Emotional Companion</title>
+        <link rel="icon" href="/cat.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
