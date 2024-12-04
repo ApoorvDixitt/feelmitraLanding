@@ -166,7 +166,7 @@ export default function FeelMitraLandingPage() {
           onClick={() => scrollToSection("hero")}
           className="text-xl md:text-2xl font-bold text-[#EA580C] cursor-pointer hover:text-[#F97316] transition-colors"
         >
-          FEELMITRA
+          <Image src="/feelmitralogo.png" alt="Feel Mitra" width={100} height={30} />
         </div>
 
         {/* Mobile Menu Button */}
@@ -220,12 +220,16 @@ export default function FeelMitraLandingPage() {
         </nav>
 
         <div className="hidden md:flex space-x-4">
-          <button className="text-[#F97316] border border-[#F97316] px-4 py-2 rounded-full hover:bg-[#F97316] hover:text-white transition-all">
+          {/* <button className="text-[#F97316] border border-[#F97316] px-4 py-2 rounded-full hover:bg-[#F97316] hover:text-white transition-all">
             Login
-          </button>
-          <button className="bg-[#EA580C] text-white px-4 py-2 rounded-full hover:bg-[#F97316] transition-all">
-            Signup
-          </button>
+          </button> */}
+          <a href="http://localhost:3000" className="relative bg-[#EA580C] text-white px-4 py-2 rounded-full hover:bg-[#F97316] transition-all duration-300 flex items-center gap-2 group overflow-hidden">
+            <span className="relative z-10">Try Beta</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+            <span className="absolute inset-0 border-2 border-[#F97316] rounded-full animate-[border-pulse_2s_ease-in-out_infinite]"></span>
+          </a>
         </div>
       </motion.header>
 
@@ -254,12 +258,16 @@ export default function FeelMitraLandingPage() {
                 </button>
               )
             )}
-            <button className="text-[#F97316] border border-[#F97316] px-4 py-2 rounded-full hover:bg-[#F97316] hover:text-white transition-all">
+            {/* <button className="text-[#F97316] border border-[#F97316] px-4 py-2 rounded-full hover:bg-[#F97316] hover:text-white transition-all">
               Login
-            </button>
-            <button className="bg-[#EA580C] text-white px-4 py-2 rounded-full hover:bg-[#F97316] transition-all">
-              Signup
-            </button>
+            </button> */}
+            <a href="http://localhost:3000" className="relative bg-[#EA580C] text-white px-4 py-2 rounded-full hover:bg-[#F97316] transition-all duration-300 flex items-center gap-2 group overflow-hidden w-fit mx-auto">
+              <span className="relative z-10">Try Beta</span>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+              <span className="absolute inset-0 border-2 border-[#F97316] rounded-full animate-[border-pulse_2s_ease-in-out_infinite]"></span>
+            </a>
           </div>
         </motion.div>
       )}
@@ -860,11 +868,12 @@ export default function FeelMitraLandingPage() {
             </motion.div>
           </div>
 
+          {/* Start Journaling Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#EA580C] text-white text-lg md:text-xl px-8 md:px-12 py-3 md:py-4 rounded-full hover:bg-[#F97316] transition-all shadow-lg hover:shadow-xl mt-16 flex items-center gap-2"
-          >
+           >
             <svg
               className="w-5 h-5"
               fill="none"
@@ -880,6 +889,148 @@ export default function FeelMitraLandingPage() {
             </svg>
             Start Journaling Now
           </motion.button>
+
+          {/* Newsletter Subscription Form */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full max-w-md mt-16 px-4"
+           >
+            <form 
+              onSubmit={(e) => {
+                e.preventDefault();
+                const email = e.target.email.value;
+                const button = e.target.querySelector('button');
+                
+                // Update button to loading state
+                button.disabled = true;
+                button.innerHTML = `
+                  <div class="flex items-center gap-2">
+                    <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"/>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
+                    </svg>
+                    <span>Subscribing...</span>
+                  </div>
+                `;
+
+                fetch('/api/subscribe', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    email,
+                    adminEmail: 'aman@feelmitra.in',
+                    senderEmail: 'admin@feelmitra.in'
+                  }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                  if (data.success) {
+                    // Success toast notification
+                    const toast = document.createElement('div');
+                    toast.className = `
+                      fixed top-4 right-4 flex items-center gap-2 
+                      bg-white/90 backdrop-blur-md text-green-600 px-6 py-4 rounded-lg shadow-lg
+                      transform transition-all duration-500 ease-out
+                      border-l-4 border-green-500
+                    `;
+                    toast.innerHTML = `
+                      <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      </svg>
+                      <span class="font-medium">Successfully subscribed!</span>
+                    `;
+                    
+                    // Animate toast in
+                    document.body.appendChild(toast);
+                    requestAnimationFrame(() => {
+                      toast.style.transform = 'translateY(10px)';
+                      setTimeout(() => {
+                        toast.style.transform = 'translateY(0)';
+                        toast.style.opacity = '0';
+                        setTimeout(() => toast.remove(), 500);
+                      }, 2000);
+                    });
+
+                    // Reset form
+                    e.target.reset();
+                  } else {
+                    throw new Error('Subscription failed');
+                  }
+                })
+                .catch(error => {
+                  // Error toast notification
+                  const toast = document.createElement('div');
+                  toast.className = `
+                    fixed top-4 right-4 flex items-center gap-2
+                    bg-white/90 backdrop-blur-md text-red-600 px-6 py-4 rounded-lg shadow-lg
+                    transform transition-all duration-500 ease-out
+                    border-l-4 border-red-500
+                  `;
+                  toast.innerHTML = `
+                    <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                    <span class="font-medium">Something went wrong. Please try again.</span>
+                  `;
+                  
+                  // Animate toast in
+                  document.body.appendChild(toast);
+                  requestAnimationFrame(() => {
+                    toast.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
+                      toast.style.transform = 'translateY(0)';
+                      toast.style.opacity = '0';
+                      setTimeout(() => toast.remove(), 500);
+                    }, 2000);
+                  });
+                })
+                .finally(() => {
+                  // Reset button state
+                  button.disabled = false;
+                  button.innerHTML = `
+                    <span>Subscribe to Newsletter</span>
+                  `;
+                });
+              }}
+              className="flex flex-col gap-4"
+            >
+              <div className="relative w-full">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="your@email.com"
+                  className="w-full px-6 py-4 rounded-xl bg-white/90 backdrop-blur-md 
+                            border border-[#F97316]/20 focus:border-[#EA580C] 
+                            focus:ring-2 focus:ring-[#EA580C]/20 outline-none 
+                            transition-all duration-300 text-[#EA580C] 
+                            placeholder-[#F97316]/40 text-lg"
+                />
+              </div>
+
+              <motion.button
+                type="submit"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full py-4 bg-gradient-to-r from-[#EA580C] to-[#F97316] 
+                          text-white rounded-xl hover:from-[#F97316] hover:to-[#EA580C] 
+                          transition-all duration-300 shadow-lg hover:shadow-xl 
+                          text-lg font-medium disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                Subscribe to Newsletter
+              </motion.button>
+            </form>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-[#F97316] text-sm mt-4 text-center"
+            >
+              Join our mailing list for updates and emotional wellness tips
+            </motion.p>
+          </motion.div>
         </motion.div>
       </section>
     </div>
