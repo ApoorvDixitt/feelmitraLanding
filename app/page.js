@@ -404,7 +404,7 @@ export default function FeelMitraLandingPage() {
             >
               <div className="relative w-full h-full">
                 <iframe
-                  src="https://www.youtube.com/embed/_fuimO6ErKI?autoplay=1&mute=1&rel=0&controls=1"
+                  src={process.env.YOUTUBE_VIDEO_LINK}
                   title="Feel Mitra Introduction"
                   className="absolute inset-0 w-full h-full"
                   frameBorder="0"
