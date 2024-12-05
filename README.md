@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img src="public/feelmitralogo.png" alt="Feel Mitra Logo" width="200"/>
+  
+  # Feel Mitra - Your AI Emotional Companion
+  
+  [![Next.js](https://img.shields.io/badge/Next.js-13.0-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+  [![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+  
+  Your trusted AI companion for emotional wellness and mental health support
+</div>
 
-## Getting Started
+## 🌟 Overview
 
-First, run the development server:
+Feel Mitra is an innovative AI-powered emotional companion designed to provide 24/7 support for your mental wellness journey. Through empathetic conversations and personalized guidance, Feel Mitra helps users navigate their emotions, reduce stress, and maintain better mental health.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Key Features
+
+### 🤖 AI-Powered Emotional Support
+- Real-time emotional analysis and support
+- Personalized conversations based on user context
+- Non-judgmental and empathetic responses
+
+### 🎯 Mental Wellness Tools
+- Guided meditation exercises
+- Stress management techniques
+- Mood tracking and analysis
+- Personalized wellness recommendations
+
+### 🔒 Privacy & Security
+- End-to-end encryption
+- Anonymous conversations
+- Secure data handling
+- GDPR compliant
+
+### 🌍 Accessibility
+- 24/7 availability
+- Multiple language support
+- Text and voice interactions
+- Low-bandwidth optimization
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18.0 or later
+- npm or yarn
+- Git
+
+### Installation
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 13
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **AI/ML**: OpenAI GPT-4
+- **Database**: PostgreSQL
+- **ORM**: Prisma
+- **Authentication**: NextAuth.js
+- **Deployment**: Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Features in Detail
 
-## Learn More
+### Emotional Support
+- Real-time emotion detection
+- Contextual conversation handling
+- Crisis support and resources
+- Personalized coping strategies
 
-To learn more about Next.js, take a look at the following resources:
+### Self-Help Tools
+- Daily mood journaling
+- Breathing exercises
+- Mindfulness activities
+- Progress tracking
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Community Features
+- Anonymous support groups
+- Shared experiences
+- Resource sharing
+- Success stories
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔐 Privacy First
 
-## Deploy on Vercel
+Feel Mitra prioritizes user privacy and data security:
+- No personal information required
+- Encrypted conversations
+- Regular data purging
+- Transparent privacy policy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application is deployed on Vercel and can be accessed at [feelmitra.com](https://feelmitra.com)
+
+## 📈 Roadmap
+
+- [ ] Voice interaction support
+- [ ] Mobile applications (iOS/Android)
+- [ ] Integration with wearable devices
+- [ ] Multi-language support
+- [ ] Advanced analytics dashboard
+- [ ] Professional therapist network
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- OpenAI for GPT models
+- Mental health professionals who provided guidance
+- Our amazing community of users and contributors
+
+## 📞 Support
+
+For support, email support@feelmitra.com or join our [Discord community](https://discord.gg/feelmitra).
+
+## 🔗 Links
+
+- [Website](https://feelmitra.in)
+- [Documentation](https://docs.feelmitra.in)
+- [Blog](https://blog.feelmitra.in)
+- [Community](https://community.feelmitra.in)
+
+---
+
+<div align="center">
+  Made with ❤️ by the Feel Mitra Team
+</div>
