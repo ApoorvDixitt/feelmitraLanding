@@ -369,7 +369,11 @@ export default function FeelMitraLandingPage() {
             placeholder="Your thoughts deserve a home, Start journaling now ..."
             className={`w-full flex-grow text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#EA580C] placeholder-[#EA580C]/50 outline-none resize-none mb-4 bg-transparent font-normal italic ${sourceSerif.className}`}
           />
-          <button className="self-end bg-[#EA580C] text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#F97316] transition-all text-base md:text-lg">
+          <button className="self-end bg-[#EA580C] text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#F97316] transition-all text-base md:text-lg"
+            onClick={() => {
+              window.location.href = 'https://localhost:3000/';
+            }}
+          >
             Analyze
           </button>
         </motion.div>
@@ -873,6 +877,9 @@ export default function FeelMitraLandingPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-[#EA580C] text-white text-lg md:text-xl px-8 md:px-12 py-3 md:py-4 rounded-full hover:bg-[#F97316] transition-all shadow-lg hover:shadow-xl mt-16 flex items-center gap-2"
+            onClick={() => {
+              window.location.href = 'https://localhost:3000/';
+            }}
            >
             <svg
               className="w-5 h-5"
