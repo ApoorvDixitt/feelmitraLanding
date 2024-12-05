@@ -25,7 +25,7 @@ export async function POST(request) {
         <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; background-color: #FAFAFA; padding: 40px 20px;">
           <div style="background: white; border-radius: 16px; padding: 40px 32px; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);">
             <div style="text-align: center; margin-bottom: 32px;">
-              <img src="https://feelmitra.in/logo.png" alt="Feel Mitra Logo" style="width: 120px; height: auto;">
+              <img src="https://www.feelmitra.in/_next/image?url=%2Ffeelmitralogo.png&w=256&q=75" alt="Feel Mitra Logo" style="width: 120px; height: auto;">
             </div>
             
             <h2 style="color: #EA580C; text-align: center; font-size: 24px; font-weight: 600; margin: 0 0 24px 0;">Welcome to Feel Mitra! 🎉</h2>
@@ -81,9 +81,9 @@ export async function POST(request) {
         <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; background-color: #FAFAFA; padding: 40px 20px;">
           <div style="background: white; border-radius: 16px; padding: 40px 32px; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);">
             <div style="text-align: center; margin-bottom: 32px;">
-              <img src="https://feelmitra.in/logo.png" alt="Feel Mitra Logo" style="width: 100px; height: auto;">
+              <img src="https://www.feelmitra.in/_next/image?url=%2Ffeelmitralogo.png&w=256&q=75" alt="Feel Mitra Logo" style="width: 100px; height: auto;">
             </div>
-            
+
             <div style="background: linear-gradient(to right, #EA580C, #F97316); border-radius: 12px; padding: 24px; color: white; margin-bottom: 32px;">
               <h2 style="margin: 0 0 16px 0; font-size: 20px; text-align: center;">New Newsletter Subscriber! 🎉</h2>
               <div style="background: rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 16px;">
