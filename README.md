@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/og-image.png" alt="Feel Mitra Logo" width="200"/>
+  <img src="public/feelmitralogo.png" alt="Feel Mitra Logo" width="200"/>
   
   # Feel Mitra - Your AI Emotional Companion
   
@@ -128,10 +128,10 @@ For support, email support@feelmitra.com or join our [Discord community](https:/
 
 ## 🔗 Links
 
-- [Website](https://feelmitra.com)
-- [Documentation](https://docs.feelmitra.com)
-- [Blog](https://blog.feelmitra.com)
-- [Community](https://community.feelmitra.com)
+- [Website](https://feelmitra.in)
+- [Documentation](https://docs.feelmitra.in)
+- [Blog](https://blog.feelmitra.in)
+- [Community](https://community.feelmitra.in)
 
 ---
 
