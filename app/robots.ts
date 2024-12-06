@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/', '/admin/'], // Add paths you want to block
     },
-    sitemap: 'https://feelmitra.in/sitemap.xml',
+    sitemap: 'https://feelmitra.in/sitemap.ts',
   }
 } 
