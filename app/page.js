@@ -5,6 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Source_Serif_4 } from 'next/font/google';
+import dynamic from 'next/dynamic';
 
 const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
@@ -16,6 +17,19 @@ const sourceSerif = Source_Serif_4({
 });
 
 // Fix the font paths by removing the extra forward slash
+
+// Create a client-side only YouTube component
+const YouTubeEmbed = dynamic(() => import('./components/YouTubeEmbed'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full bg-white/80 animate-pulse flex items-center justify-center">
+      <span className="text-[#F97316]">Loading video...</span>
+    </div>
+  ),
+});
+
+// Update the constant to use the public env variable
+const YOUTUBE_VIDEO_URL = process.env.NEXT_PUBLIC_YOUTUBE_VIDEO_URL || 'https://www.youtube.com/embed/oAVGsJGi-u4?si=QApsEMaqYwkD_LHa';
 
 export default function FeelMitraLandingPage() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -151,8 +165,12 @@ export default function FeelMitraLandingPage() {
     >
       <Head>
         <title>Feel Mitra - Your Emotional Companion</title>
-        <link rel="icon" href="/cat.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/icon.png" type="image/png" />
+        <meta 
+          name="viewport" 
+          content="width=device-width, initial-scale=1.0" 
+          suppressHydrationWarning 
+        />
       </Head>
 
       {/* Floating Header */}
@@ -403,14 +421,7 @@ export default function FeelMitraLandingPage() {
               className="lg:col-span-2 bg-white/80 backdrop-blur-md rounded-3xl overflow-hidden shadow-xl relative h-[300px] lg:h-[500px]"
             >
               <div className="relative w-full h-full">
-                <iframe
-                  src={process.env.YOUTUBE_VIDEO_LINK}
-                  title="Feel Mitra Introduction"
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                <YouTubeEmbed videoUrl={YOUTUBE_VIDEO_URL} />
               </div>
             </motion.div>
 
