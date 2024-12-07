@@ -97,7 +97,7 @@ export default function FeelMitraLandingPage() {
     },
     {
       name: "Shubh Srivastava",
-      role: "Chief Technology Officer",
+      role: "Product Strategy Lead",
       image: "/Shubh_4.jpg",
       description:
         "Tech genius behind our advanced emotional analysis algorithms.",
@@ -242,7 +242,7 @@ export default function FeelMitraLandingPage() {
             Login
           </button> */}
           <a href="http://localhost:3000" className="relative bg-[#EA580C] text-white px-4 py-2 rounded-full hover:bg-[#F97316] transition-all duration-300 flex items-center gap-2 group overflow-hidden">
-            <span className="relative z-10">Try Beta</span>
+            <span className="relative z-10">Join the Waitlist</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
@@ -280,7 +280,7 @@ export default function FeelMitraLandingPage() {
               Login
             </button> */}
             <a href="http://localhost:3000" className="relative bg-[#EA580C] text-white px-4 py-2 rounded-full hover:bg-[#F97316] transition-all duration-300 flex items-center gap-2 group overflow-hidden w-fit mx-auto">
-              <span className="relative z-10">Try Beta</span>
+              <span className="relative z-10">Join the Waitlist</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -363,9 +363,9 @@ export default function FeelMitraLandingPage() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className={`text-center mb-8 z-10 relative mt-24 md:mt-auto px-4 ${sourceSerif.className}`}
-        >
-          <h1 className={`flex flex-col text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-black ${sourceSerif.className}`}>
+          className={`text-center z-10 relative px-4 flex flex-col justify-center items-center min-h-[40vh] ${sourceSerif.className}`}
+         >
+          <h1 className={`flex flex-col text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-black pt-12 ${sourceSerif.className}`}>
             Your Journey to
             <span className={`text-[#EA580C] italic`}>Mental Well-being</span>
           </h1>
@@ -381,11 +381,11 @@ export default function FeelMitraLandingPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="relative z-20 w-full max-w-[1000px] min-h-[180px] sm:min-h-[220px] md:min-h-[250px] bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-6 lg:p-8 flex flex-col mb-8 sm:mb-16 mx-4"
+          className="relative z-20 w-full max-w-[1000px] min-h-[180px] sm:min-h-[220px] md:min-h-[250px] bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-6 lg:p-8 flex flex-col mb-8 sm:mb-16 mx-auto"
         >
           <textarea
             placeholder="Your thoughts deserve a home, Start journaling now ..."
-            className={`w-full flex-grow text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#EA580C] placeholder-[#EA580C]/50 outline-none resize-none mb-4 bg-transparent font-normal italic ${sourceSerif.className}`}
+            className={`w-full flex-grow text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#EA580C] placeholder-[#EA580C]/50 outline-none resize-none mb-4 bg-transparent font-normal italic min-h-[100px] md:min-h-[150px] lg:min-h-[300px] ${sourceSerif.className}`}
           />
           <button className="self-end bg-[#EA580C] text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#F97316] transition-all text-base md:text-lg"
             onClick={() => {
@@ -509,34 +509,33 @@ export default function FeelMitraLandingPage() {
         </motion.h2>
 
         {/* Updated Features Grid Layout */}
-        <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 relative z-10">
+        <div className="w-full max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 relative z-10">
           {/* Main Feature Card */}
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="md:col-span-2 bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-12 shadow-xl"
+            className="md:col-span-2 bg-white/90 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl border border-[#F97316]/20 hover:border-[#F97316]/40 transition-all duration-300"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-[#F97316] mb-4 md:mb-6">
+            <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#F97316] to-[#EA580C] bg-clip-text text-transparent mb-6">
               Mood Tracking & Analysis
             </h3>
-            <p className="text-base md:text-lg lg:text-xl text-[#EA580C] mb-6 md:mb-8">
+            <p className="text-base md:text-lg lg:text-xl text-[#EA580C]/90 mb-8 leading-relaxed">
               Track your emotions with our intuitive system and discover
               patterns in your emotional well-being through advanced AI
               analysis.
             </p>
 
             {/* Feature Grid Inside Main Card */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {features.slice(0, 2).map((feature, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.03 }}
-                  className="bg-gradient-to-br from-[#FFEDD5] to-[#FFF7ED] p-4 md:p-6 rounded-xl flex flex-col sm:flex-row items-start sm:items-center gap-4"
+                  whileHover={{ scale: 1.02 }}
+                  className="bg-gradient-to-br from-[#FFEDD5]/70 to-[#FFF7ED]/70 p-6 rounded-2xl flex flex-col sm:flex-row items-start gap-5 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-[#EA580C] rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#EA580C] to-[#F97316] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg transform -rotate-6 hover:rotate-0 transition-all duration-300">
                     {index === 0 ? (
-                      // Sentiment Analysis icon
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-7 h-7 text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -549,9 +548,8 @@ export default function FeelMitraLandingPage() {
                         />
                       </svg>
                     ) : (
-                      // Emotional Analysis icon
                       <svg
-                        className="w-6 h-6 text-white"
+                        className="w-7 h-7 text-white"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -566,10 +564,10 @@ export default function FeelMitraLandingPage() {
                     )}
                   </div>
                   <div>
-                    <h4 className="text-[#EA580C] font-bold text-lg md:text-xl mb-2">
+                    <h4 className="text-[#EA580C] font-bold text-lg md:text-xl mb-3">
                       {feature.title}
                     </h4>
-                    <p className="text-sm md:text-base text-[#F97316]">
+                    <p className="text-sm md:text-base text-[#F97316]/90 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -583,14 +581,13 @@ export default function FeelMitraLandingPage() {
             <motion.div
               key={index}
               whileHover={{ scale: 1.03 }}
-              className="bg-white/80 backdrop-blur-md rounded-3xl p-6 md:p-8 shadow-xl"
+              className="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-[#F97316]/20 hover:border-[#F97316]/40 transition-all duration-300"
             >
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#FFEDD5] to-[#FFF7ED] rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="flex flex-col sm:flex-row items-start gap-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-[#FFEDD5] to-[#FFF7ED] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md">
                   {index === 0 ? (
-                    // Guided Journaling icon
                     <svg
-                      className="w-7 h-7 text-[#F97316]"
+                      className="w-8 h-8 text-[#F97316]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -603,9 +600,8 @@ export default function FeelMitraLandingPage() {
                       />
                     </svg>
                   ) : (
-                    // Habit Insights icon
                     <svg
-                      className="w-7 h-7 text-[#F97316]"
+                      className="w-8 h-8 text-[#F97316]"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -620,10 +616,10 @@ export default function FeelMitraLandingPage() {
                   )}
                 </div>
                 <div>
-                  <h4 className="text-xl md:text-2xl font-bold text-[#F97316] mb-2">
+                  <h4 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#F97316] to-[#EA580C] bg-clip-text text-transparent mb-3">
                     {feature.title}
                   </h4>
-                  <p className="text-sm md:text-base lg:text-lg text-[#EA580C]">
+                  <p className="text-sm md:text-base lg:text-lg text-[#EA580C]/90 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -666,12 +662,12 @@ export default function FeelMitraLandingPage() {
                 <h3 className="text-lg md:text-xl lg:text-2xl text-black font-bold mb-2">
                   {member.name}
                 </h3>
-                {/* <p className="text-[#F97316] text-sm md:text-base lg:text-lg font-medium mb-3">
+                <p className="text-[#F97316] text-sm md:text-base lg:text-lg font-medium mb-3">
                   {member.role}
                 </p>
-                <p className="text-sm md:text-base text-[#EA580C] leading-relaxed mb-4">
+                <p className="text-sm md:text-base text-[#EA580C] leading-relaxed mb-4 text-left">
                   {member.description}
-                </p> */}
+                </p>
 
                 {/* Add social links */}
                 <div className="flex space-x-4 mt-auto">
@@ -741,7 +737,7 @@ export default function FeelMitraLandingPage() {
         >
           <h2
             className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-6 ${sourceSerif.className}`}
-          >
+           >
             Simple Steps to Emotional Wellness
           </h2>
           <p className="text-xl md:text-2xl text-[#F97316] mb-12">
@@ -912,8 +908,8 @@ export default function FeelMitraLandingPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full max-w-md mt-16 px-4"
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="w-full max-w-md mt-16 px-4 sm:px-6"
            >
             <form 
               onSubmit={(e) => {
@@ -924,12 +920,12 @@ export default function FeelMitraLandingPage() {
                 // Update button to loading state
                 button.disabled = true;
                 button.innerHTML = `
-                  <div class="flex items-center gap-2">
-                    <svg class="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                  <div class="flex items-center justify-center gap-3">
+                    <svg class="animate-spin h-5 w-5 text-white" viewBox="0 0 24 24">
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"/>
                       <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"/>
                     </svg>
-                    <span>Subscribing...</span>
+                    <span class="font-medium">Subscribing...</span>
                   </div>
                 `;
 
@@ -948,27 +944,34 @@ export default function FeelMitraLandingPage() {
                     // Success toast notification
                     const toast = document.createElement('div');
                     toast.className = `
-                      fixed top-4 right-4 flex items-center gap-2 
-                      bg-white/90 backdrop-blur-md text-green-600 px-6 py-4 rounded-lg shadow-lg
+                      fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3
+                      bg-white text-green-800 px-6 py-4 rounded-lg shadow-lg
                       transform transition-all duration-500 ease-out
-                      border-l-4 border-green-500
+                      border border-green-200 sm:text-base text-sm
+                      max-w-[90vw] sm:max-w-md z-10
                     `;
                     toast.innerHTML = `
-                      <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                      <svg class="w-6 h-6 text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                       </svg>
-                      <span class="font-medium">Successfully subscribed!</span>
+                      <div>
+                        <p class="font-semibold">Successfully subscribed!</p>
+                        <p class="text-green-700 text-sm mt-0.5">We'll keep you updated with the latest news.</p>
+                      </div>
                     `;
                     
-                    // Animate toast in
+                    // Animate toast
                     document.body.appendChild(toast);
                     requestAnimationFrame(() => {
-                      toast.style.transform = 'translateY(10px)';
-                      setTimeout(() => {
-                        toast.style.transform = 'translateY(0)';
-                        toast.style.opacity = '0';
-                        setTimeout(() => toast.remove(), 500);
-                      }, 2000);
+                      toast.style.transform = 'translate(-50%, 100%)';
+                      requestAnimationFrame(() => {
+                        toast.style.transform = 'translate(-50%, 0)';
+                        setTimeout(() => {
+                          toast.style.opacity = '0';
+                          toast.style.transform = 'translate(-50%, 100%)';
+                          setTimeout(() => toast.remove(), 300);
+                        }, 3000);
+                      });
                     });
 
                     // Reset form
@@ -981,34 +984,41 @@ export default function FeelMitraLandingPage() {
                   // Error toast notification
                   const toast = document.createElement('div');
                   toast.className = `
-                    fixed top-4 right-4 flex items-center gap-2
-                    bg-white/90 backdrop-blur-md text-red-600 px-6 py-4 rounded-lg shadow-lg
+                    fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-3
+                    bg-red-50 text-red-800 px-6 py-4 rounded-lg shadow-lg
                     transform transition-all duration-500 ease-out
-                    border-l-4 border-red-500
+                    border border-red-200 sm:text-base text-sm
+                    max-w-[90vw] sm:max-w-md
                   `;
                   toast.innerHTML = `
-                    <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    <svg class="w-6 h-6 text-red-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    <span class="font-medium">Something went wrong. Please try again.</span>
+                    <div>
+                      <p class="font-semibold">Subscription failed</p>
+                      <p class="text-red-700 text-sm mt-0.5">Please check your email and try again.</p>
+                    </div>
                   `;
                   
-                  // Animate toast in
+                  // Animate toast
                   document.body.appendChild(toast);
                   requestAnimationFrame(() => {
-                    toast.style.transform = 'translateY(10px)';
-                    setTimeout(() => {
-                      toast.style.transform = 'translateY(0)';
-                      toast.style.opacity = '0';
-                      setTimeout(() => toast.remove(), 500);
-                    }, 2000);
+                    toast.style.transform = 'translate(-50%, 100%)';
+                    requestAnimationFrame(() => {
+                      toast.style.transform = 'translate(-50%, 0)';
+                      setTimeout(() => {
+                        toast.style.opacity = '0';
+                        toast.style.transform = 'translate(-50%, 100%)';
+                        setTimeout(() => toast.remove(), 300);
+                      }, 3000);
+                    });
                   });
                 })
                 .finally(() => {
                   // Reset button state
                   button.disabled = false;
                   button.innerHTML = `
-                    <span>Subscribe to Newsletter</span>
+                    <span class="font-medium">Subscribe to Newsletter</span>
                   `;
                 });
               }}
@@ -1019,12 +1029,13 @@ export default function FeelMitraLandingPage() {
                   type="email"
                   name="email"
                   required
-                  placeholder="your@email.com"
-                  className="w-full px-6 py-4 rounded-xl bg-white/90 backdrop-blur-md 
-                            border border-[#F97316]/20 focus:border-[#EA580C] 
-                            focus:ring-2 focus:ring-[#EA580C]/20 outline-none 
+                  placeholder="Enter your email address"
+                  className="w-full px-6 py-4 rounded-xl bg-white/95 backdrop-blur-md 
+                            border-2 border-[#F97316]/20 focus:border-[#EA580C] 
+                            focus:ring-4 focus:ring-[#EA580C]/10 outline-none 
                             transition-all duration-300 text-[#EA580C] 
-                            placeholder-[#F97316]/40 text-lg"
+                            placeholder-[#F97316]/40 text-base sm:text-lg
+                            hover:border-[#EA580C]/40"
                 />
               </div>
 
@@ -1035,7 +1046,9 @@ export default function FeelMitraLandingPage() {
                 className="w-full py-4 bg-gradient-to-r from-[#EA580C] to-[#F97316] 
                           text-white rounded-xl hover:from-[#F97316] hover:to-[#EA580C] 
                           transition-all duration-300 shadow-lg hover:shadow-xl 
-                          text-lg font-medium disabled:opacity-70 disabled:cursor-not-allowed"
+                          text-base sm:text-lg font-medium disabled:opacity-70 
+                          disabled:cursor-not-allowed disabled:hover:scale-100
+                          transform-gpu"
               >
                 Subscribe to Newsletter
               </motion.button>
@@ -1043,8 +1056,8 @@ export default function FeelMitraLandingPage() {
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-[#F97316] text-sm mt-4 text-center"
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-[#F97316] text-sm sm:text-base mt-4 text-center"
             >
               Join our mailing list for updates and emotional wellness tips
             </motion.p>
