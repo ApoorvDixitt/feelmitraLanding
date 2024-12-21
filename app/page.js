@@ -118,18 +118,7 @@ export default function FeelMitraLandingPage() {
         linkedin: "https://linkedin.com/in/apoorv-dixit-06106b305",
         whatsapp: "https://wa.me/9452878147",
       },
-    },
-    {
-      name: "Anant Vardhan",
-      role: "Data Science Director",
-      image: "/Anant_2.jpg",
-      description: "Transforming raw emotional data into meaningful insights.",
-      social: {
-        twitter: "https://twitter.com/anantvardhan",
-        linkedin: "https://linkedin.com/in/avpthegreat",
-        whatsapp: "https://wa.me/+918874497809", // Added country code prefix
-      },
-    },
+    }
   ];
 
   const features = [
@@ -370,7 +359,7 @@ export default function FeelMitraLandingPage() {
             <span className={`text-[#EA580C] italic`}>Mental Well-being</span>
           </h1>
           <p
-            className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mt-4 text-black font-normal`}
+            className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mt-10 text-black font-normal`}
           >
             Because Every Feeling Deserves a Friend
           </p>
@@ -385,15 +374,20 @@ export default function FeelMitraLandingPage() {
         >
           <textarea
             placeholder="Your thoughts deserve a home, Start journaling now ..."
-            className={`w-full flex-grow text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#EA580C] placeholder-[#EA580C]/50 outline-none resize-none mb-4 bg-transparent font-normal italic min-h-[100px] md:min-h-[150px] lg:min-h-[300px] ${sourceSerif.className}`}
+            className={`w-full flex-grow text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#EA580C] placeholder-[#EA580C]/50 outline-none resize-none mb-4 bg-transparent font-normal italic min-h-[80px] md:min-h-[100px] lg:min-h-[120px] ${sourceSerif.className}`}
           />
-          <button className="self-end bg-[#EA580C] text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#F97316] transition-all text-base md:text-lg"
-            onClick={() => {
-              window.location.href = 'https://localhost:3000/';
-            }}
-          >
-            Analyze
-          </button>
+      <button
+        className="self-end bg-[#EA580C] text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#F97316] transition-all text-base md:text-lg flex items-center justify-center"
+        onClick={() => {
+          console.log("Analyze button clicked");
+          window.location.href = "https://localhost:3000/";
+        }}
+        id="analyze-button"
+        aria-label="Analyze button. Shortcut: Ctrl+Enter"
+      >
+        Analyze <span className="ml-2 text-sm font-medium tracking-wide bg-white/10 px-2 py-0.5 rounded">Ctrl+Enter</span>
+      </button>
+
         </motion.div>
       </section>
 
@@ -642,7 +636,7 @@ export default function FeelMitraLandingPage() {
           >
             Team
           </motion.h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -663,10 +657,10 @@ export default function FeelMitraLandingPage() {
                   {member.name}
                 </h3>
                 <p className="text-[#F97316] text-sm md:text-base lg:text-lg font-medium mb-3">
-                  {member.role}
+                  {/* {member.role} */}
                 </p>
                 <p className="text-sm md:text-base text-[#EA580C] leading-relaxed mb-4 text-left">
-                  {member.description}
+                  {/* {member.description} */}
                 </p>
 
                 {/* Add social links */}
