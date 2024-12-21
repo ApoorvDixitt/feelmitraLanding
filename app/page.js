@@ -359,7 +359,7 @@ export default function FeelMitraLandingPage() {
             <span className={`text-[#EA580C] italic`}>Mental Well-being</span>
           </h1>
           <p
-            className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mt-10 text-black font-normal`}
+            className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mt-8 text-black font-normal`}
           >
             Because Every Feeling Deserves a Friend
           </p>
@@ -367,27 +367,27 @@ export default function FeelMitraLandingPage() {
 
         {/* Writing Box with Input */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="relative z-20 w-full max-w-[1000px] min-h-[180px] sm:min-h-[220px] md:min-h-[250px] bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-6 lg:p-8 flex flex-col mb-8 sm:mb-16 mx-auto"
+          className="relative z-20 w-full max-w-[1000px] min-h-[180px] sm:min-h-[220px] md:min-h-[250px] bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-6 lg:p-8 flex flex-col mx-auto mt-10"
         >
+          <div className="flex-grow" /> {/* Spacer to push content down */}
           <textarea
             placeholder="Your thoughts deserve a home, Start journaling now ..."
             className={`w-full flex-grow text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#EA580C] placeholder-[#EA580C]/50 outline-none resize-none mb-4 bg-transparent font-normal italic min-h-[80px] md:min-h-[100px] lg:min-h-[120px] ${sourceSerif.className}`}
-          />
-      <button
-        className="self-end bg-[#EA580C] text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#F97316] transition-all text-base md:text-lg flex items-center justify-center"
-        onClick={() => {
-          console.log("Analyze button clicked");
-          window.location.href = "https://localhost:3000/";
-        }}
-        id="analyze-button"
-        aria-label="Analyze button. Shortcut: Ctrl+Enter"
-      >
-        Analyze <span className="ml-2 text-sm font-medium tracking-wide bg-white/10 px-2 py-0.5 rounded">Ctrl+Enter</span>
-      </button>
-
+            />
+          <button
+            className="self-end bg-[#EA580C] text-white px-4 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#F97316] transition-all text-base md:text-lg flex items-center justify-center"
+            onClick={() => {
+              console.log("Analyze button clicked");
+              window.location.href = "https://localhost:3000/";
+            }}
+            id="analyze-button"
+            aria-label="Analyze button. Shortcut: Ctrl+Enter"
+          >
+            Analyze <span className="ml-2 text-sm font-medium tracking-wide bg-white/10 px-2 py-0.5 rounded">Ctrl+Enter</span>
+          </button>
         </motion.div>
       </section>
 
