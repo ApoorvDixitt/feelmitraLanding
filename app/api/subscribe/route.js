@@ -1,5 +1,5 @@
-import nodemailer from 'nodemailer';
-import { NextResponse } from 'next/server';
+import nodemailer from "nodemailer";
+import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
@@ -12,15 +12,15 @@ export async function POST(request) {
       secure: false, // Use TLS
       auth: {
         user: process.env.MAILGUN_SMTP_USERNAME,
-        pass: process.env.MAILGUN_SMTP_PASSWORD
-      }
+        pass: process.env.MAILGUN_SMTP_PASSWORD,
+      },
     });
 
     // Send confirmation email to subscriber
     await transporter.sendMail({
       from: `Feel Mitra <${senderEmail}>`,
       to: email,
-      subject: 'Welcome to Feel Mitra Newsletter!',
+      subject: "Welcome to Feel Mitra Newsletter!",
       html: `
         <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; background-color: #FAFAFA; padding: 40px 20px;">
           <div style="background: white; border-radius: 16px; padding: 40px 32px; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);">
@@ -69,14 +69,14 @@ export async function POST(request) {
             </div>
           </div>
         </div>
-      `
+      `,
     });
 
     // Send notification to admin
     await transporter.sendMail({
       from: `Feel Mitra <${senderEmail}>`,
       to: adminEmail,
-      subject: 'New Newsletter Subscription',
+      subject: "New Newsletter Subscription",
       html: `
         <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; background-color: #FAFAFA; padding: 40px 20px;">
           <div style="background: white; border-radius: 16px; padding: 40px 32px; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);">
@@ -100,15 +100,15 @@ export async function POST(request) {
             </div>
           </div>
         </div>
-      `
+      `,
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error sending emails:', error);
+    console.error("Error sending emails:", error);
     return NextResponse.json(
-      { success: false, error: 'Failed to send emails' },
+      { success: false, error: "Failed to send emails" },
       { status: 500 }
     );
   }
-} 
+}
