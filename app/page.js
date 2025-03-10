@@ -256,7 +256,10 @@ export default function FeelMitraLandingPage() {
 
         <div className="hidden md:flex space-x-4">
           <div id="typeform-div" className="flex items-center">
-            <div data-tf-live="01JP09YTXEKF1RMR2J3DJ44FR3"></div>
+            <div
+              data-tf-live="01JP09YTXEKF1RMR2J3DJ44FR3"
+              className="typeform-button"
+            ></div>
           </div>
         </div>
       </motion.header>
@@ -286,27 +289,14 @@ export default function FeelMitraLandingPage() {
                 </button>
               )
             )}
-            <a
-              href="http://localhost:3000"
-              className="relative bg-[#EA580C] text-white px-4 py-2 rounded-full hover:bg-[#F97316] transition-all duration-300 flex items-center gap-2 group overflow-hidden w-fit mx-auto"
-            >
-              <span className="relative z-10">Join the Waitlist</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 relative z-10 group-hover:translate-x-1 transition-transform duration-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
-              <span className="absolute inset-0 border-2 border-[#F97316] rounded-full animate-[border-pulse_2s_ease-in-out_infinite]"></span>
-            </a>
+            <div className="flex justify-center pt-2">
+              <div id="typeform-div-mobile" className="flex items-center">
+                <div
+                  data-tf-live="01JP09YTXEKF1RMR2J3DJ44FR3"
+                  className="typeform-button"
+                ></div>
+              </div>
+            </div>
           </div>
         </motion.div>
       )}
@@ -1061,12 +1051,7 @@ export default function FeelMitraLandingPage() {
                   name="email"
                   required
                   placeholder="Enter your email address"
-                  className="w-full px-6 py-4 rounded-xl bg-white/95 backdrop-blur-md 
-                            border-2 border-[#F97316]/20 focus:border-[#EA580C] 
-                            focus:ring-4 focus:ring-[#EA580C]/10 outline-none 
-                            transition-all duration-300 text-[#EA580C] 
-                            placeholder-[#F97316]/40 text-base sm:text-lg
-                            hover:border-[#EA580C]/40"
+                  className="w-full px-6 py-4 rounded-xl bg-white/95 backdrop-blur-md border-2 border-[#F97316]/20 focus:border-[#EA580C] focus:ring-4 focus:ring-[#EA580C]/10 outline-none transition-all duration-300 text-[#EA580C] placeholder-[#F97316]/40 text-base sm:text-lg hover:border-[#EA580C]/40"
                 />
               </div>
 
