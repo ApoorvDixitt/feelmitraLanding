@@ -142,6 +142,17 @@ export default function FeelMitraLandingPage() {
         whatsapp: "https://wa.me/9452878147",
       },
     },
+    {
+      name: "Anant Vardhan",
+      role: "Frontend Developer",
+      image: "/AVP.jpg",
+      description: "Crafting the frontend of Feel Mitra from intitutive UI/UX",
+      social: {
+        twitter: "https://twitter.com/your-handle",
+        linkedin: "https://www.linkedin.com/in/avpthegreat",
+        whatsapp: "https://wa.me/+918874497809",
+      },
+    },
   ];
 
   const features = [
@@ -655,7 +666,7 @@ export default function FeelMitraLandingPage() {
         id="team"
         className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden bg-gradient-to-b from-[#FFF7ED] to-[#FFEDD5] px-4 py-16 md:py-24"
       >
-        <div className="w-full max-w-[1200px] relative z-10">
+        <div className="w-full max-w-[1400px] relative z-10">
           <motion.h2
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -663,35 +674,35 @@ export default function FeelMitraLandingPage() {
           >
             Team
           </motion.h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.03 }}
                 className="bg-white/80 backdrop-blur-md rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xl flex flex-col items-center text-center h-full"
               >
-                <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-4 md:mb-6 border-4 border-[#F97316] shadow-lg">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden mb-4 md:mb-6 border-4 border-[#F97316] shadow-lg">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    width={160}
-                    height={160}
+                    width={128}
+                    height={128}
                     className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-300"
                     priority
                   />
                 </div>
-                <h3 className="text-lg md:text-xl lg:text-2xl text-black font-bold mb-2">
+                <h3 className="text-base md:text-lg lg:text-xl text-black font-bold mb-2">
                   {member.name}
                 </h3>
-                <p className="text-[#F97316] text-sm md:text-base lg:text-lg font-medium mb-3">
-                  {/* {member.role} */}
+                <p className="text-[#F97316] text-sm md:text-base font-medium mb-3">
+                  {member.role}
                 </p>
-                <p className="text-sm md:text-base text-[#EA580C] leading-relaxed mb-4 text-left">
-                  {/* {member.description} */}
+                <p className="text-xs md:text-sm text-[#EA580C] leading-relaxed mb-4 text-center px-2">
+                  {member.description}
                 </p>
 
                 {/* Add social links */}
-                <div className="flex space-x-4 mt-auto">
+                <div className="flex space-x-3 mt-auto">
                   <a
                     href={member.social.twitter}
                     target="_blank"
@@ -699,7 +710,7 @@ export default function FeelMitraLandingPage() {
                     className="text-[#F97316] hover:text-[#EA580C] transition-colors"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-5 h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -714,7 +725,7 @@ export default function FeelMitraLandingPage() {
                     className="text-[#F97316] hover:text-[#EA580C] transition-colors"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-5 h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
@@ -729,7 +740,7 @@ export default function FeelMitraLandingPage() {
                     className="text-[#F97316] hover:text-[#EA580C] transition-colors"
                   >
                     <svg
-                      className="w-6 h-6"
+                      className="w-5 h-5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
